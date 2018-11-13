@@ -1,12 +1,25 @@
 // Jenkinsfile for Turing Machine in CS 4110
 pipeline {
-	agent any
+	agent {
+        node { label 'master' }
+	}
 
 	stages {
 		stage('Build') {
 			steps {
 				echo 'Building..'
-				sh 'javac TuringMachine.java'
+				//##############################################################
+				// Uncomment exactly one of the "sh" lines below and change 
+				//   PATHTOSOURCE to the relative path to your source file.
+				// 
+
+				//sh 'cs4110turingmachinebuild script "./PATHTOSOURCE"'
+				//sh 'cs4110turingmachinebuild swift "./PATHTOSOURCE"'
+				//sh 'cs4110turingmachinebuild java "./PATHTOSOURCE"'
+				//sh 'cs4110turingmachinebuild c# "./PATHTOSOURCE"'
+
+				// Touch nothing else in this file or receive a failing grade.
+				//##############################################################
 			}
 			post {
 				failure {
