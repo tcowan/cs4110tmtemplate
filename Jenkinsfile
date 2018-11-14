@@ -10,15 +10,16 @@ pipeline {
 				echo 'Building..'
 				//##############################################################
 				// Uncomment exactly one of the "sh" lines below and change 
-				//   PATHTOSOURCE to the relative path to your source file.
-				// 
+				//   FILE to the relative path to your source file(s).
+				//   Add or delete FILE names as needed for your app
+				//   Make no other changes to this section whatsoever. 
 
-				//sh 'cs4110turingmachinebuild script "./PATHTOSOURCE"'
-				//sh 'cs4110turingmachinebuild swift "./PATHTOSOURCE"'
-				//sh 'cs4110turingmachinebuild java "./PATHTOSOURCE"'
-				//sh 'cs4110turingmachinebuild c# "./PATHTOSOURCE"'
+				//sh 'cs4110turingmachinebuild script "./FILE1" "./FILE2" '
+				//sh 'cs4110turingmachinebuild java "./FILE1" "./FILE2" '
+				//sh 'cs4110turingmachinebuild c# "./FILE1" "./FILE2" '
+				//sh 'cs4110turingmachinebuild swift "./FILE1" "./FILE2" '
 
-				// Touch nothing else in this file or receive a failing grade.
+				// Touch nothing else in this file or receive a zero grade.
 				//##############################################################
 			}
 			post {
