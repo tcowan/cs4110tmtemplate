@@ -1,7 +1,7 @@
 // Jenkinsfile for Turing Machine in CS 4110
 pipeline {
 	agent {
-        node { label 'master' }
+        node { label 'ubuntuvps' }
 	}
 
 	stages {
