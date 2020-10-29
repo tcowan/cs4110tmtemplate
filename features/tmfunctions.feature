@@ -10,10 +10,13 @@ Feature: TuringMachine demonstrates proper functions without crashing
 			Halt
 			"""
 		When I run `turingmachine beginswitha.txt "aaa"`
+        And OUTPUT is printed
 		Then the output should match /Accepted: aaa/
 		And I run `turingmachine beginswitha.txt "abba"`
+        And OUTPUT is printed
 		Then the output should match /Accepted: abba/
 		And I run `turingmachine beginswitha.txt "ababab"`
+        And OUTPUT is printed
 		Then the output should match /Accepted: ababab/
 		Then 20 points are awarded
 
@@ -27,12 +30,16 @@ Feature: TuringMachine demonstrates proper functions without crashing
 
 			"""
 		When I run `turingmachine alla.txt "b"`
+        And OUTPUT is printed
 		Then the output should match /Rejected: b/
 		And I run `turingmachine alla.txt "ab"`
+        And OUTPUT is printed
 		Then the output should match /Rejected: ab/
 		And I run `turingmachine alla.txt "aaaab"`
+        And OUTPUT is printed
 		Then the output should match /Rejected: aaaab/
 		And I run `turingmachine alla.txt "aaaa"`
+        And OUTPUT is printed
 		Then the output should match /Accepted: aaaa/
 		Then 40 points are awarded
 
@@ -49,10 +56,13 @@ Feature: TuringMachine demonstrates proper functions without crashing
 			3, _, _, L, 3
 			"""
 		When I run `turingmachine tapehead.txt "b"`
+        And OUTPUT is printed
 		Then the output should match /Rejected: b/
 		And I run `turingmachine tapehead.txt "abaa"`
+        And OUTPUT is printed
 		Then the output should match /Rejected: abaa/
 		And I run `turingmachine tapehead.txt "aaaab"`
+        And OUTPUT is printed
 		Then the output should match /Rejected: aaaab/
 		Then 40 points are awarded
 
@@ -71,10 +81,13 @@ Feature: TuringMachine demonstrates proper functions without crashing
 			Halt
 			"""
 		When I run `turingmachine loop.txt "a"`
+        And OUTPUT is printed
 		Then the output should match /Rejected: a/
 		And I run `turingmachine loop.txt "bbbbba"`
+        And OUTPUT is printed
 		Then the output should match /Rejected: bbbbba/
 		And I run `turingmachine loop.txt "bbb"`
+        And OUTPUT is printed
 		Then the output should match /Accepted: bbb/
 		Then 40 points are awarded
 
@@ -98,10 +111,13 @@ Feature: TuringMachine demonstrates proper functions without crashing
 			8, *, *, R, 1 Start
 			"""
 		When I run `turingmachine anbnan.txt "aba"`
+        And OUTPUT is printed
 		Then the output should match /Accepted: aba/
 		And I run `turingmachine anbnan.txt "aaabbbaaa"`
+        And OUTPUT is printed
 		Then the output should match /Accepted: aaabbbaaa/
 		And I run `turingmachine anbnan.txt "aabba"`
+        And OUTPUT is printed
 		Then the output should match /Rejected: aabba/
 		Then 40 points are awarded
 
