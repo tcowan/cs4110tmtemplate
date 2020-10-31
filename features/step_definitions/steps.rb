@@ -9,7 +9,7 @@ Given /^OUTPUT is printed/ do
         puts "STDOUT is EMPTY"
     end
     #stderrOutput = all_commands.map { |c| c.stderr }.join("\n").strip
-    stdoutOutput = last_command_started.stderr
+    stderrOutput = last_command_started.stderr
     if stderrOutput != ""
         puts "STDERR>>>"
         puts stderrOutput
