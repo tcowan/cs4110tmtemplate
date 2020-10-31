@@ -1,5 +1,6 @@
 Given /^OUTPUT is printed/ do
-    stdoutOutput = all_commands.map { |c| c.stdout }.join("\n").strip
+    #stdoutOutput = all_commands.map { |c| c.stdout }.join("\n").strip
+    stdoutOutput = last_command_started.map { |c| c.stdout }.join("\n").strip
     if stdoutOutput != ""
         puts "STDOUT>>>"
         puts stdoutOutput
