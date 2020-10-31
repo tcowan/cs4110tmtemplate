@@ -1,6 +1,6 @@
 Given /^OUTPUT is printed/ do
     #stdoutOutput = all_commands.map { |c| c.stdout }.join("\n").strip
-    stdoutOutput = last_command_started.stdout.join("\n").strip
+    stdoutOutput = last_command_started.stdout
     if stdoutOutput != ""
         puts "STDOUT>>>"
         puts stdoutOutput
@@ -8,7 +8,8 @@ Given /^OUTPUT is printed/ do
     else
         puts "STDOUT is EMPTY"
     end
-    stderrOutput = all_commands.map { |c| c.stderr }.join("\n").strip
+    #stderrOutput = all_commands.map { |c| c.stderr }.join("\n").strip
+    stdoutOutput = last_command_started.stderr
     if stderrOutput != ""
         puts "STDERR>>>"
         puts stderrOutput
