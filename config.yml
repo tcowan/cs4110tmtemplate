@@ -6,6 +6,8 @@
 #language: swift
 #language: script
 #language: c#
+#language: c
+#language: c++
 
 # files: list your source file(s) and do not use tabs in this file.
 #   Each file must be preceeded by a hyphen and indented two spaces.
@@ -16,3 +18,5 @@
 files: 
 #  - "TuringMachine/main.swift"  
 #  - "TuringMachine/TuringMachine.swift"
+#  - "TuringMachine.c"
+#  - "TuringMachine.cpp"
