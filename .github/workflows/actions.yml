@@ -1,0 +1,14 @@
+name: GitHub Actions CS 4110
+on: [push]
+env:
+  LANG: "en_US.UTF-8"
+  LANGUAGE: "en_US:en"
+  LC_ALL: "en_US.UTF-8"
+
+jobs:
+  GitHub-Actions-CS4110:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - run: cs4110actions
+
