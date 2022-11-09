@@ -1,7 +1,7 @@
 # Edit this file only as instructed.
 ---
 # language: the choices are (uncomment exactly one)
-#   java, swift, script or c#
+#   java, swift, script, c#, c or c++
 #language: java
 #language: swift
 #language: script
